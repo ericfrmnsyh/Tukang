@@ -53,6 +53,10 @@
         <item name="android:textColorHint">?colorOnSecondary</item>
         <item name="android:textColor">@color/white</item>
         <item name="startIconTint">?colorOnSecondary</item>
+        <item name="boxCornerRadiusBottomEnd">20dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusTopStart">20dp</item>
     </style>
 
     <style name="TabLayoutTextStyle">

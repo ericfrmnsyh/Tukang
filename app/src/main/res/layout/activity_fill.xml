@@ -78,10 +78,13 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtPassword"
+            style="@style/TextInputEditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/TextInputEditTextStyle"
-            android:inputType="textPassword" />
+            android:gravity="center_vertical"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:maxLines="10" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
