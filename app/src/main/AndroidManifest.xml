@@ -18,9 +18,6 @@
         android:theme="@style/Theme.Skripsi"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity
-            android:name=".ui.activity.FillActivity"
-            android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -55,6 +52,9 @@
             android:exported="false" />
         <activity
             android:name=".ui.activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.FillActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activity.DashboardActivity"

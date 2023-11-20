@@ -34,31 +34,31 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/core_rhino_heavy"
             android:text="@string/title"
-            android:textColor="@color/white"
-            android:textSize="35sp" />
+            android:textColor="#bb9457"
+            android:textSize="21sp" />
 
     </com.google.android.material.appbar.MaterialToolbar>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldUsername"
+        android:id="@+id/textFieldDate"
         style="@style/OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginTop="112dp"
         android:layout_marginEnd="48dp"
-        android:hint="@string/email"
+        android:hint="@string/surveyDate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBarLayout"
-        app:startIconDrawable="@drawable/ic_outline_account_circle_24">
+        app:startIconDrawable="@drawable/calendar_month_24px">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtEmail"
+            android:id="@+id/txtDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/TextInputEditTextStyle"
-            android:inputType="text"/>
+            android:inputType="date"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,22 +70,37 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="48dp"
-        android:hint="@string/password"
+        android:hint="@string/uraian"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldUsername"
-        app:startIconDrawable="@drawable/ic_outline_lock_24">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldDate"
+        app:startIconDrawable="@drawable/description_24px">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtPassword"
+            android:id="@+id/txtDesc"
             style="@style/TextInputEditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:inputType="textMultiLine"
-            android:lines="5"
-            android:maxLines="10" />
+            android:lines="7"
+            android:maxLines="12" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/fab_create_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:backgroundTint="#bb9457"
+        android:contentDescription="@string/tambah_data"
+        app:tint="@android:color/white"
+        android:focusable="true"
+        android:src="@drawable/add_a_photo_24px" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

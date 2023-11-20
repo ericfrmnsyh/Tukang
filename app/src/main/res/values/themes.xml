@@ -56,7 +56,7 @@
         <item name="boxCornerRadiusBottomEnd">20dp</item>
         <item name="boxCornerRadiusTopEnd">12dp</item>
         <item name="boxCornerRadiusBottomStart">12dp</item>
-        <item name="boxCornerRadiusTopStart">20dp</item>
+        <item name="boxCornerRadiusTopStart">25dp</item>
     </style>
 
     <style name="TabLayoutTextStyle">

@@ -47,7 +47,7 @@
     <string name="surat4">SK Berkelakuan Baik</string>
     <string name="surat5">Surat Keterangan Usaha</string>
     <string name="invalid_permission">Tidak Dapat Menyalakan NFC</string>
-    <string name="title">Data KTP</string>
+    <string name="title">Tukang</string>
     <string name="logo_kabupaten">logo kabupaten</string>
     <string name="nama_kab">PEMERINTAH KABUPATEN NGANJUK</string>
     <string name="nama_kec">KECAMATAN JATIKALEN</string>
@@ -95,4 +95,6 @@
     <string name="avatar">Avatar\n</string>
     <string name="user_fullName">Nama Lengkap</string>
     <string name="test">Test</string>
+    <string name="surveyDate">Waktu Survey</string>
+    <string name="uraian">Uraikan masalah anda...</string>
 </resources>

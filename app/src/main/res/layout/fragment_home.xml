@@ -10,7 +10,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="8"
         android:background="@color/background_color_50"
         android:padding="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,9 +43,10 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card2"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
             android:layout_margin="5dp"
+            android:layout_marginTop="35dp"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
@@ -85,8 +85,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card3"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
             android:layout_margin="5dp"
             android:clickable="true"
             android:focusable="true"
@@ -95,7 +95,7 @@
             app:cardElevation="0dp"
             app:layout_constraintEnd_toStartOf="@id/card4"
             app:layout_constraintStart_toEndOf="@+id/card2"
-            app:layout_constraintTop_toBottomOf="@id/image_slider_card">
+            app:layout_constraintTop_toTopOf="@id/card2">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -127,8 +127,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card4"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
             android:layout_margin="5dp"
             android:layout_marginTop="20dp"
             android:clickable="true"
@@ -138,7 +138,7 @@
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/card3"
-            app:layout_constraintTop_toBottomOf="@id/image_slider_card">
+            app:layout_constraintTop_toTopOf="@id/card2">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -170,10 +170,10 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card5"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
             android:layout_margin="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
@@ -213,10 +213,10 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card6"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
             android:layout_margin="5dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="50dp"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
@@ -256,10 +256,10 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card7"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
             android:layout_margin="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
