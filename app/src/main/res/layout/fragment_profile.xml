@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.ProfileFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_user_avatar"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/nopp"
+                android:contentDescription="@string/avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/email"
+                android:textAppearance="@style/TextAppearance.App.Headline5"
+                app:layout_constraintEnd_toEndOf="@+id/image_user_avatar"
+                app:layout_constraintStart_toStartOf="@+id/image_user_avatar"
+                app:layout_constraintTop_toBottomOf="@+id/image_user_avatar" />
+
+            <TextView
+                android:id="@+id/text_user_fullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_fullName"
+                android:textAppearance="@style/TextAppearance.App.Headline5"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/text_user_email"
+                app:layout_constraintStart_toStartOf="@+id/text_user_email"
+                app:layout_constraintTop_toBottomOf="@+id/text_user_email" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="@+id/text_user_fullName"
+                app:layout_constraintStart_toStartOf="@+id/text_user_fullName"
+                app:layout_constraintTop_toBottomOf="@+id/text_user_fullName" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_create_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/tambah_data"
+        app:tint="@android:color/white"
+        android:focusable="true"
+        android:src="@drawable/ic_add_24" />
+
+</RelativeLayout>
