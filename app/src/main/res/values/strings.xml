@@ -97,4 +97,5 @@
     <string name="test">Test</string>
     <string name="surveyDate">Waktu Survey</string>
     <string name="uraian">Uraikan masalah anda...</string>
+    <string name="register">Register</string>
 </resources>

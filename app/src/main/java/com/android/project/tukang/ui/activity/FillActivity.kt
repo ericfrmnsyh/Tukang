@@ -39,8 +39,12 @@ class FillActivity : AppCompatActivity() {
     // Set action for options menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_logout -> {
+            R.id.action_repeat -> {
                 startActivity(Intent(this, DashboardActivity::class.java) )
+                true
+            }
+            R.id.action_logout -> {
+                startActivity(Intent(this, LoginActivity::class.java) )
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -93,7 +97,6 @@ class FillActivity : AppCompatActivity() {
         // focus then this will protect
         // the app from crash
         if (view != null) {
-
             // now assign the system
             // service to InputMethodManager
             val manager = getSystemService(

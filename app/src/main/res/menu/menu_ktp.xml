@@ -7,7 +7,7 @@
     <item
         android:id="@+id/action_repeat"
         android:orderInCategory="104"
-        android:icon="@drawable/ic_round_repeat_24"
+        android:icon="@drawable/arrow_back_ios_new_24px"
         android:title="@string/repeat"
         android:fontFamily="@font/karla_bold"
         app:showAsAction="ifRoom" />
