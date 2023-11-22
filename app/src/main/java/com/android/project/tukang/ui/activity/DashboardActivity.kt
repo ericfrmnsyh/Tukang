@@ -1,14 +1,21 @@
 package com.android.project.tukang.ui.activity
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.android.project.tukang.R
 import com.android.project.tukang.databinding.ActivityDashboardBinding
+import com.android.project.tukang.ui.fragment.HomeFragment
+import com.android.project.tukang.ui.fragment.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import nl.joery.animatedbottombar.AnimatedBottomBar
+import org.jetbrains.annotations.Nullable
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -20,27 +27,55 @@ class DashboardActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.title = " "
         setContentView(binding.root)
+        supportActionBar?.hide()
 
-        val navView: BottomNavigationView = binding.navView
+        binding.bottomBar.setOnTabSelectListener(object : AnimatedBottomBar.OnTabSelectListener {
+            override fun onTabSelected(
+                lastIndex: Int,
+                lastTab: AnimatedBottomBar.Tab?,
+                newIndex: Int,
+                newTab: AnimatedBottomBar.Tab
+            ) {
+                when(newIndex){
+                    0->replace(HomeFragment())
+                    1->replace(ProfileFragment())
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.navigation_home, R.id.navigation_profile))
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
-
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            when (destination.id) {
-                R.id.navigation_home -> {
-                    supportActionBar?.hide()
                 }
-                R.id.navigation_profile -> {
-                    supportActionBar?.hide()
-                }
-                else -> supportActionBar?.show()
+                Log.d("bottom_bar", "Selected index: $newIndex, title: ${newTab.title}")
             }
-        }
+
+            // An optional method that will be fired whenever an already selected tab has been selected again.
+            override fun onTabReselected(index: Int, tab: AnimatedBottomBar.Tab) {
+                Log.d("bottom_bar", "Reselected index: $index, title: ${tab.title}")
+            }
+        })
+
+//        val navView: BottomNavigationView = binding.bottomBar
+//
+//        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+//        // Passing each menu ID as a set of Ids because each
+//        // menu should be considered as top level destinations.
+//        val appBarConfiguration = AppBarConfiguration(setOf(
+//            R.id.navigation_home, R.id.navigation_profile))
+//        setupActionBarWithNavController(navController, appBarConfiguration)
+//        navView.setupWithNavController(navController)
+//
+//        navController.addOnDestinationChangedListener { _, destination, _ ->
+//            when (destination.id) {
+//                R.id.navigation_home -> {
+//                    supportActionBar?.hide()
+//                }
+//                R.id.navigation_profile -> {
+//                    supportActionBar?.hide()
+//                }
+//                else -> supportActionBar?.show()
+//            }
+//        }
+    }
+
+    private fun replace(fragment: Fragment){
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.nav_host_fragment_activity_main, fragment)
+        transaction.commit()
     }
 }
