@@ -98,4 +98,6 @@
     <string name="surveyDate">Waktu Survey</string>
     <string name="uraian">Uraikan masalah anda...</string>
     <string name="register">Register</string>
+    <string name="unknown_location">Unknown Location</string>
+    <string name="location">Location</string>
 </resources>

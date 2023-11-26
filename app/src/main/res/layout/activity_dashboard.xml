@@ -49,9 +49,11 @@
         android:layout_height="0dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintVertical_bias="0.0"
         app:navGraph="@navigation/mobile_navigation" />
 
     <nl.joery.animatedbottombar.AnimatedBottomBar
@@ -59,7 +61,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:background="@color/gray_dark"
+        android:background="#006d77"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:abb_selectedTabType="text"
@@ -70,9 +72,9 @@
         app:abb_selectedIndex="0"
         app:abb_animationDuration="600"
         app:abb_animationInterpolator="@android:anim/overshoot_interpolator"
-        app:abb_tabColor="#faedcd"
-        app:abb_tabColorSelected="#bb9457"
-        app:abb_indicatorColor="#faedcd"/>
+        app:abb_tabColor="#edf6f9"
+        app:abb_tabColorSelected="#83c5be"
+        app:abb_indicatorColor="#edf6f9"/>
 
 <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
 <!--        android:id="@+id/nav_view"-->

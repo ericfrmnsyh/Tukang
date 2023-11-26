@@ -1,21 +1,14 @@
 package com.android.project.tukang.ui.activity
 
-import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.android.project.tukang.R
 import com.android.project.tukang.databinding.ActivityDashboardBinding
 import com.android.project.tukang.ui.fragment.HomeFragment
 import com.android.project.tukang.ui.fragment.ProfileFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import nl.joery.animatedbottombar.AnimatedBottomBar
-import org.jetbrains.annotations.Nullable
 
 class DashboardActivity : AppCompatActivity() {
 
